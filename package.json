@@ -1,0 +1,44 @@
+{
+  "name": "nlb-library-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for searching Singapore's National Library Board (NLB) catalogue — search books, check branch availability, find kids' books by age, and get AI similar-book recommendations.",
+  "type": "module",
+  "bin": {
+    "nlb-library-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "nlb",
+    "singapore",
+    "library",
+    "books",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "optionalDependencies": {
+    "@xenova/transformers": "^2.17.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
